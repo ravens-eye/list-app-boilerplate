@@ -1,0 +1,28 @@
+{
+  "name": "list-app-boilerplate",
+  "version": "0.0.1",
+  "description": "A full stack MERN app to create and save lists",
+  "main": "server/app.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravens-eye/list-app-boilerplate.git"
+  },
+  "keywords": [
+    "MERN",
+    "React",
+    "Node",
+    "MongoDB",
+    "Mongoose"
+  ],
+  "author": "krab7191, ocskier, sammiefrog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ravens-eye/list-app-boilerplate/issues"
+  },
+  "homepage": "https://github.com/ravens-eye/list-app-boilerplate#readme"
+}
