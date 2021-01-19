@@ -3,10 +3,26 @@
   "version": "0.0.1",
   "description": "A full stack MERN app to create and save lists",
   "main": "server/app.js",
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7",
+    "nyc": "^15.1.0",
+    "mocha": "^8.2.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "yarn run clean:reports && yarn run test:server && yarn run test:client",
+    "test:server": "cd server && nyc mocha 'tests/**/*.js' --recursive",
+    "test:client": "cd client && yarn test:coverage",
+    "dev:start:server": "nodemon app.js",
+    "dev:start:client": "cd client && yarn start",
+    "dev:start": "concurrently \"yarn run dev:start:server\" \"yarn run dev:start:client\"",
+    "install": "cd client && yarn install",
+    "start:prod": "node app.js",
+    "build": "cd client && yarn run build",
+    "clean:reports": "rm -rf ./client/coverage && rm -rf ./coverage"
   },
   "repository": {
     "type": "git",
