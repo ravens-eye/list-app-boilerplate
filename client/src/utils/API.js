@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-export default {
+const API = {
+
   testBackEnd: () => {
     return axios.get("/api/test");
   },
@@ -35,3 +36,5 @@ export default {
     return axios.get("/api/grocery-items/" + id);
   },
 };
+
+export default API;
