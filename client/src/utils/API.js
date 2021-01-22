@@ -18,7 +18,7 @@ const API = {
     return axios.put("/api/grocery-lists/" + id, updateData);
   },
   deleteList: (id) => {
-    return axios.get("/api/grocery-lists/" + id);
+    return axios.delete("/api/grocery-lists/" + id);
   },
   getAllItems: () => {
     return axios.get("/api/grocery-items");
@@ -33,7 +33,7 @@ const API = {
     return axios.put("/api/grocery-items/" + id, updateData);
   },
   deleteListItem: (id) => {
-    return axios.get("/api/grocery-items/" + id);
+    return axios.delete("/api/grocery-items/" + id);
   },
 };
 
