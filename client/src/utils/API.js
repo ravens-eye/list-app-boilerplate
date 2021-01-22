@@ -19,4 +19,19 @@ export default {
   deleteList: (id) => {
     return axios.get("/api/grocery-lists/" + id);
   },
+  getAllItems: () => {
+    return axios.get("/api/grocery-items");
+  },
+  getListItem: (id) => {
+    return axios.get("/api/grocery-items/" + id);
+  },
+  addListItem: (listItemData) => {
+    return axios.post("/api/grocery-items", listItemData);
+  },
+  updateListItem: ({ id, updateData }) => {
+    return axios.put("/api/grocery-items/" + id, updateData);
+  },
+  deleteListItem: (id) => {
+    return axios.get("/api/grocery-items/" + id);
+  },
 };
