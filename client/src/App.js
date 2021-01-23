@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import logo from "./logo.svg";
 import API from "./utils/API";
 import './App.css';
 
 function App() {
-  useEffect(()=>{
-    API.testBackEnd().then(res=>console.log(res));
-  },[])
+  useEffect(() => {
+    API.testBackEnd().then(res => console.log(res));
+  }, [])
   return (
     <div className="App">
       <header className="App-header">
