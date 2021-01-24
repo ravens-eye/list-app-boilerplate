@@ -1,3 +1,5 @@
+//aggregating and exporting models
 module.exports = {
-    GroceryList: require('./groceryList')
-}
+  GroceryList: require('./groceryList'),
+  GroceryItem: require('./groceryItem'),
+};
