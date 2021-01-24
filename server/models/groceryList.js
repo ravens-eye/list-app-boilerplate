@@ -6,6 +6,7 @@ const Schema = mongoose.Schema;
 const groceryListSchema = new Schema({
     name: {
         type: String,
+        required: "Please enter a name for your grocery list"
     },
     date: {
         type: Date,
